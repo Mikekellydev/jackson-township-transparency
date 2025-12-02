@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jackson Township Transparency Report 2012–2024</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jackson Township Transparency Project</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Chart.js CDN for the trend graph -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Resident-led transparency site for Jackson Township, DeKalb County, Indiana. Explore trustee and board duties, compensation trends, and how township elections work." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jackson Township Transparency Project" />
+  <meta property="og:description"
+        content="A non-partisan, resident-led website explaining Jackson Township government, compensation, and elections in plain language." />
+  <meta property="og:url" content="https://jacksontownshipelections.com/" />
+  <meta property="og:site_name" content="Jackson Township Transparency Project" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Jackson Township Transparency Project" />
+  <meta name="twitter:description"
+        content="Resident-led transparency for Jackson Township: duties, pay trends, and how to run for office." />
 </head>
- <header class="site-header">
+<body>
+
+<header class="site-header">
   <div class="nav-container">
-    <div class="site-title"></div>
+    <div class="site-title">Jackson Township Transparency Project</div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="roles.html">Trustee & Board Duties</a>
@@ -21,631 +34,120 @@
   </div>
 </header>
 
-
-<body>
-  <header class="hero">
-    <div class="hero-inner">
-      <h1>Jackson Township Transparency Report</h1>
-      <p class="subtitle">Elected Leadership & Compensation · 2012–2024 · Jackson Township, DeKalb County, Indiana</p>
-      <p class="note">
-        Source: Indiana Gateway “Certified Report of Public Employment and Compensation” for Jackson Township.
-      </p>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- INTRODUCTION -->
-    <section id="intro">
-      <h2>Purpose</h2>
-      <p>
-  This website provides organized, easy-to-read information about Jackson Township government,
-  including compensation reports, official responsibilities, and how elections work. All information
-  comes from publicly available sources. The purpose of this project is to help residents understand
-  how township government operates and encourage informed participation.
-</p>
-
-      <p>
-        The goal is simple: give township residents, including our HOA and other neighborhoods, easy access
-        to the same information that appears in state reports so we can be informed and prepared for the
-        <strong>2026 township election</strong>.
-      </p>
-    </section>
-
-    <section id="why-it-matters">
-  <h2>Why Continuity and Transparency Matter</h2>
-
-  <p>
-    Township government affects emergency services, assistance programs, local tax rates, and the overall
-    financial health of our community. Indiana law requires certain information to be documented so that
-    township operations continue smoothly even in emergencies or leadership absences.
-  </p>
-
-  <p>
-    Publishing this information does not criticize any official. It simply ensures that residents understand
-    how their township operates and who is responsible for critical decisions. Transparency gives the
-    community confidence and supports long-term stability.
-  </p>
-</section>
-
-    
-    <!-- COMPENSATION OVERVIEW -->
-    <section id="comp-overview">
-      <h2>Compensation Overview (2012–2024)</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>High-Level Totals by Role</h3>
-          <ul class="totals-list">
-            <li><strong>Trustees (Cook + Wilcoxson):</strong> $104,239</li>
-            <li><strong>Advisory Board Members (all board members combined):</strong> $24,400</li>
-            <li><strong>Deputy Trustee / Clerk (Chlora Smith):</strong> $11,350</li>
-          </ul>
-          <p class="small">
-            Over this 12-year span, about <strong>$4.30</strong> has gone to trustees for every <strong>$1.00</strong> paid
-            to advisory board members, with the deputy/clerk role funded in 2012–2014.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Trustee vs Board vs Deputy · Trend</h3>
-          <canvas id="compChart" aria-label="Compensation trend chart" role="img"></canvas>
-          <p class="chart-caption small">
-            Each line shows the total annual compensation for that role across all people in that role.
-          </p>
-        </div>
-      </div>
-
-      <h3>Year-by-Year Compensation by Role</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th>Trustee total</th>
-              <th>Board total (3 seats combined)</th>
-              <th>Deputy / Clerk total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>2012</td><td>$4,400</td><td>$1,500</td><td>$3,500</td></tr>
-            <tr><td>2013</td><td>$4,840</td><td>$1,650</td><td>$3,850</td></tr>
-            <tr><td>2014</td><td>$5,000</td><td>$1,800</td><td>$4,000</td></tr>
-            <tr><td>2015</td><td>$5,000</td><td>$1,800</td><td>$0</td></tr>
-            <tr><td>2016</td><td>$10,333</td><td>$1,800</td><td>$0</td></tr>
-            <tr><td>2017</td><td>$10,333</td><td>$1,750</td><td>$0</td></tr>
-            <tr><td>2018</td><td>$10,333</td><td>$1,800</td><td>$0</td></tr>
-            <tr><td>2019</td><td>$9,000</td><td>$1,800</td><td>$0</td></tr>
-            <tr><td>2020</td><td>$9,000</td><td>$2,100</td><td>$0</td></tr>
-            <tr><td>2021</td><td>$9,000</td><td>$2,100</td><td>$0</td></tr>
-            <tr><td>2022</td><td>$9,000</td><td>$2,100</td><td>$0</td></tr>
-            <tr><td>2023</td><td>$9,000</td><td>$2,100</td><td>$0</td></tr>
-            <tr><td>2024</td><td>$9,000</td><td>$2,100</td><td>$0</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 12-YEAR ROLLUPS -->
-    <section id="rollups">
-      <h2>Twelve-Year Rollups by Person</h2>
-
-      <h3>Trustees</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Years as trustee in report</th>
-              <th>12-year total as trustee</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jeffrey W. Cook</td>
-              <td>2012–2014</td>
-              <td>$14,240</td>
-            </tr>
-            <tr>
-              <td>Audra J. Wilcoxson</td>
-              <td>2015–2024</td>
-              <td>$89,999</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Advisory Board Members</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Approx. years with compensation</th>
-              <th>12-year total as board member</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Bryan Grogg</td><td>2012–2014</td><td>$1,650</td></tr>
-            <tr><td>Cynthia A. Schlaifer</td><td>2012–2014, 2017–2018</td><td>$2,400</td></tr>
-            <tr><td>Ralph A. Seiler</td><td>2012–2015</td><td>$1,750</td></tr>
-            <tr><td>Troy Jester</td><td>2015–2017</td><td>$1,600</td></tr>
-            <tr><td>Larry Seiler</td><td>2015–2024</td><td>$6,400</td></tr>
-            <tr><td>James (Jim) Pfefferkorn</td><td>2019–2024</td><td>$4,100</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Deputy Trustee / Clerk</h3>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Years as deputy/clerk</th>
-              <th>12-year total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Chlora Smith</td>
-              <td>2012–2014</td>
-              <td>$11,350</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="deputy-role">
-  <h2>The Deputy Trustee/Clerk Role: What Changed and Why It Matters</h2>
-
-  <p>
-    From 2012 through 2014, Jackson Township employed a paid Deputy Trustee/Clerk whose duties included helping
-    with township assistance records, administrative support, and maintaining public documents. According to the
-    state compensation reports, this position received:
-  </p>
-
-  <ul>
-    <li>2012: $3,500</li>
-    <li>2013: $3,850</li>
-    <li>2014: $4,000</li>
-  </ul>
-
-  <p>
-    Beginning in 2015, the year a new trustee (Audra Wilcoxson) took office, the Deputy Trustee/Clerk position no
-    longer appears in the township’s certified state reports. No compensation has been reported for this role from
-    2015 through 2024.
-  </p>
-
-  <h3>Why this is important for transparency</h3>
-
-  <p>
-    Indiana law requires townships to maintain certain public records, respond to public requests, and document
-    meeting minutes, budgets, and assistance decisions. Many townships use a deputy or clerk position to support
-    those responsibilities and to provide continuity if the trustee is unavailable.
-  </p>
-
-  <p>
-    The removal of this position does not necessarily indicate wrongdoing, but it does raise important questions
-    for residents about administrative capacity and transparency. Without a deputy-level role:
-  </p>
-
-  <ul>
-    <li>Record-keeping and public access may depend solely on one individual.</li>
-    <li>Response times for assistance, inquiries, or documents may be slower.</li>
-    <li>There may be no designated “chief deputy,” which is normally expected for continuity.</li>
-    <li>Critical functions like minutes, township assistance files, and budgeting support have no publicly
-        compensated support role.</li>
-  </ul>
-
-  <h3>Questions residents may wish to explore</h3>
-
-  <ul>
-    <li>Why was the deputy/clerk role discontinued after 2014?</li>
-    <li>Who now performs the administrative duties formerly supported by that position?</li>
-    <li>Has the township designated a chief deputy for continuity, as recommended in state guidance?</li>
-    <li>Would reinstating a part-time deputy or clerk improve transparency and service to residents?</li>
-  </ul>
-
-  <p>
-    This site highlights the change simply because it affects transparency, public access, and the overall capacity
-    of township operations. Understanding how these duties are handled today helps residents make informed
-    decisions in upcoming township elections.
-  </p>
-</section>
-
-    <section id="deputy-comparison">
-  <h2>Before and After the Deputy Trustee/Clerk Position</h2>
-
-  <p>
-    The table below compares Jackson Township’s structure when a Deputy Trustee/Clerk was funded
-    (2012–2014) with the years after that position no longer appears in the public compensation reports
-    (2015–2024). This is not intended as criticism of any person, but as a simple look at how the
-    township’s administrative capacity has changed.
-  </p>
-
-  <div class="comparison-grid">
-    <div class="comparison-column">
-      <h3>2012–2014<br><span>With Deputy Trustee/Clerk</span></h3>
-      <ul>
-        <li><strong>Staffing:</strong> Trustee, three board members, and a paid Deputy Trustee/Clerk.</li>
-        <li><strong>Admin support:</strong> Day to day paperwork and records supported by a dedicated
-            deputy/clerk position.</li>
-        <li><strong>Public records:</strong> An additional role in place to help manage minutes, files,
-            and township assistance documentation.</li>
-        <li><strong>Continuity:</strong> Easier to identify a deputy-level person who can assist if the
-            trustee is unavailable.</li>
-        <li><strong>Estimated annual cost:</strong> Approximately $3,500–$4,000 per year for the
-            deputy/clerk position, based on state reports.</li>
-      </ul>
-    </div>
-
-    <div class="comparison-column">
-      <h3>2015–2024<br><span>No Deputy Position Reported</span></h3>
-      <ul>
-        <li><strong>Staffing:</strong> Trustee and three board members, with no deputy/clerk listed in
-            state compensation reports.</li>
-        <li><strong>Admin support:</strong> Administrative duties handled by the trustee and/or others;
-            no separate paid deputy role shown in the data.</li>
-        <li><strong>Public records:</strong> Records and responses to requests may depend on fewer people,
-            which can work well or become a strain depending on workload.</li>
-        <li><strong>Continuity:</strong> From public information alone, it is less clear who would act as
-            a chief deputy if the trustee could not serve.</li>
-        <li><strong>Estimated annual cost:</strong> No separate deputy/clerk salary, which reduces direct
-            personnel costs but may also reduce dedicated administrative capacity.</li>
-      </ul>
-    </div>
-  </div>
-
-  <p class="small">
-    Residents can decide for themselves whether the township’s current structure provides enough support
-    for record-keeping, public access, and continuity, or whether reinstating a deputy or clerk position
-    would be a worthwhile investment.
-  </p>
-</section>
-
-    <section id="trustee-designee">
-  <h2>10. Trustee Designee Requirement (IC 36-6-4-18)</h2>
-
-  <p>
-    Indiana law requires every township trustee to designate a person who will perform the trustee’s
-    duties if the trustee becomes absent from the township or is incapacitated. This designee must be
-    named within thirty days of the trustee taking office, and the trustee is required to notify:
-  </p>
-
-  <ul>
-    <li>The Chairman of the Township Board</li>
-    <li>The County Sheriff</li>
-    <li>Any other persons the trustee chooses</li>
-  </ul>
-
-  <p>
-    The law does <strong>not</strong> say that the board chairman automatically becomes the designee. The
-    trustee must formally designate someone and must provide official notice. Without this designation,
-    the township’s continuity of operations becomes unclear.
-  </p>
-
-  <p>
-    Since the Deputy Trustee/Clerk position has not been funded since 2014, it is not evident from public
-    information who the legally required designee is, or whether the required notifications have been
-    provided. Residents may wish to ask for clarification so they understand who would perform the
-    trustee’s duties in an emergency or unexpected absence.
-  </p>
-
-  <p class="small">
-    This information is provided for transparency purposes only and does not imply any criticism of current
-    or past officials. Continuity of government is an important requirement under Indiana law, and having
-    clarity benefits all residents.
-  </p>
-</section>
-
-
-
-    
-<!-- CSV DOWNLOAD -->
-
-    <h3>Download the Raw Data (CSV)</h3>
-<p>
-  For anyone who wants to review or verify the numbers directly, you can download the full data set
-  used on this site as a CSV file and open it in Excel, Google Sheets, or another spreadsheet tool.
-</p>
-<p>
-  <a class="btn-download" href="data.csv" download>Download data.csv</a>
-</p>
-
-
-    <!-- GOVERNING SEATS / STRUCTURE -->
-    <section id="governance">
-      <h2>Governing Seats and Leadership Changes</h2>
-
-      <p>
-        Indiana law sets the structure for each township:
-        <strong>1 elected trustee</strong> and <strong>3 elected advisory board members</strong>.
-        From 2012–2024, Jackson Township appears to have kept that structure, with changes in
-        <em>who</em> occupies those seats rather than the number of seats.
-      </p>
-
-      <h3>2012–2014</h3>
-      <ul>
-        <li><strong>Trustee:</strong> Jeffrey W. Cook</li>
-        <li><strong>Board:</strong> Bryan Grogg · Cynthia A. Schlaifer · Ralph A. Seiler</li>
-        <li><strong>Deputy/Clerk:</strong> Chlora Smith</li>
-      </ul>
-      <p class="small">
-        Stable team with funded deputy/clerk support. All four core roles show compensation.
-      </p>
-
-      <h3>2015–2018 (Transition Term)</h3>
-      <ul>
-        <li><strong>Trustee:</strong> Audra J. Wilcoxson replaces Jeff Cook as trustee in 2015</li>
-        <li><strong>Board (various years):</strong> Jeff Cook (as board member), Troy Jester, Larry Seiler, and Cynthia Schlaifer</li>
-        <li><strong>Deputy/Clerk:</strong> No compensation reported after 2014</li>
-      </ul>
-      <p class="small">
-        This term shows a major leadership transition: new trustee, shifting board membership, and the disappearance
-        of paid deputy/clerk compensation.
-      </p>
-
-      <h3>2019–2022 (Consolidation Term)</h3>
-      <ul>
-        <li><strong>Trustee:</strong> Audra J. Wilcoxson continues</li>
-        <li><strong>Board:</strong> Jeff Cook · Larry Seiler · James (Jim) Pfefferkorn</li>
-        <li><strong>Compensation:</strong> Board member pay increases to $700 per member per year starting in 2020;
-          trustee pay holds at $9,000 per year.</li>
-      </ul>
-      <p class="small">
-        From 2019 onward, the same trustee and the same three board members appear consistently in the state reports.
-        This provides stability and continuity, but also means the same group has controlled budget oversight for multiple terms.
-      </p>
-
-      <h3>2023–2024 (Current Term in Progress)</h3>
-      <ul>
-        <li><strong>Trustee:</strong> Audra J. Wilcoxson</li>
-        <li><strong>Board:</strong> Jeff Cook · Larry Seiler · Jim Pfefferkorn</li>
-        <li><strong>Compensation:</strong> Trustee $9,000 · Board $700 each</li>
-      </ul>
-      <p class="small">
-        <h2></h2><strong>By the 2026 election, this same four-person leadership team will have served together for eight consecutive years!</strong></h2>
-      </p>
-    </section>
-
-    <section id="leadership-continuity">
-  <h2>Leadership Continuity in Jackson Township</h2>
-
-  <p>
-    Jackson Township has experienced a high level of leadership continuity over the last decade. This section
-    highlights the length of service for key offices so residents can clearly understand who has guided township
-    decisions and for how long. This information is presented for transparency only and is not intended as
-    criticism or endorsement of any individual.
-  </p>
-
-  <div class="comparison-grid">
-    <div class="comparison-column">
-      <h3>Jeffrey W. Cook</h3>
-      <ul>
-        <li><strong>2012–2014:</strong> Served as Township Trustee</li>
-        <li><strong>2015–2024:</strong> Serves as Advisory Board Member</li>
-      </ul>
-      <p>
-        Combined, this represents <strong>12+ consecutive years</strong> of direct influence on township budgets,
-        tax levies, contracts, and financial oversight. Residents graduating high school today have lived their
-        entire childhood under decisions shaped by this same leadership presence.
-      </p>
-    </div>
-
-    <div class="comparison-column">
-      <h3>Audra J. Wilcoxson</h3>
-      <ul>
-        <li><strong>2015–2024:</strong> Serves as Township Trustee</li>
-        <li><strong>If re-elected:</strong> Will serve through 2030</li>
-      </ul>
-      <p>
-        This would be at least <strong>14 years</strong> as trustee, overseeing budgets, township assistance,
-        administrative decisions, and township operations. Consistent leadership can be beneficial, and transparency
-        allows residents to understand how long these roles have remained unchanged.
-      </p>
-    </div>
-  </div>
-
-  <p class="small">
-    Some residents appreciate long-term continuity. Others value periodic change or fresh perspectives. No matter
-    your view, it is important for the community to clearly see who has led the township and for how long.
-  </p>
-</section>
-
-    <section id="continuity-checklist">
-  <h2>Continuity of Township Government Checklist</h2>
-
-  <p>
-    Indiana townships are required to maintain basic continuity-of-government structures to ensure essential
-    services continue during emergencies, absences, or leadership transitions. Based on Indiana Code and
-    standard local government best practices, residents can reasonably expect the following items to be
-    documented and accessible upon request.
-  </p>
-
-  <ul>
-    <li><strong>1. Trustee’s Designee</strong><br>
-      Written designation required by IC 36-6-4-18, naming who performs the trustee’s duties in case of absence
-      or incapacity.
-    </li>
-
-    <li><strong>2. Notice Recipients</strong><br>
-      Confirmation that the Board Chair and County Sheriff were notified, as required by law.
-    </li>
-
-    <li><strong>3. Organizational Structure</strong><br>
-      Clear explanation of who handles administrative tasks, township assistance, recordkeeping, and budgeting.
-    </li>
-
-    <li><strong>4. Meeting Records</strong><br>
-      Township Board meeting minutes and agendas posted or available upon request.
-    </li>
-
-    <li><strong>5. Appropriations and Contracts</strong><br>
-      Annual budget approval records, fire/EMS contracts, and township assistance guidelines.
-    </li>
-
-    <li><strong>6. Public Points of Contact</strong><br>
-      How residents can reach the trustee, board members, and township office.
-    </li>
-  </ul>
-
-  <p class="small">
-    Availability of this information helps ensure stability, accountability, and community trust. Publishing it
-    does not imply any criticism of township officials; it simply supports good governance.
-  </p>
-</section>
-
-    <section id="roles-link" style="margin-top:30px;">
-  <h2>Township Roles & Responsibilities</h2>
-  <p>
-    Want to know what the Township Trustee and Advisory Board are legally responsible for under Indiana Code?
-    We've created a simple page that explains each role in plain language.
-  </p>
-
-  <p>
-    <a href="roles.html" style="font-weight:600; text-decoration:underline;">
-      View Trustee and Board Duties →
-    </a>
-  </p>
-</section>
-
-    
-<section id="faq-transparency">
-  <h2>Trustee Desginee Frequently Asked Questions</h2>
-
-  <h3>Does Jackson Township publish the trustee’s designee?</h3>
-  <p>
-    No published record is currently available on the township website. This does not mean the trustee failed
-    to designate someone; the law requires notification to the Board Chair and the County Sheriff, not public posting.
-  </p>
-
-  <h3>Who would run the township if the trustee is absent or incapacitated?</h3>
-  <p>
-    Indiana Code requires a designated individual to perform the trustee’s duties. Without public documentation,
-    residents cannot verify who that person is. A simple public posting would remove uncertainty.
-  </p>
-
-  <h3>Why does the township no longer have a Deputy Trustee/Clerk?</h3>
-  <p>
-    Compensation data shows the position was active before 2015, then discontinued. The township may still have
-    designated a designee, but the role and responsibilities are not published.
-  </p>
-
-  <h3>Is the Board Chair automatically the trustee’s backup?</h3>
-  <p>
-    No. The trustee must formally designate a person. The Board Chair only receives notice, not automatic authority.
-  </p>
-
-  <h3>Why is long-term leadership relevant?</h3>
-  <p>
-    Jackson Township has had a small, unchanged leadership group for more than a decade. Transparency helps residents
-    understand how representation and oversight have evolved.
-  </p>
-
-  <h3>Is this political?</h3>
-  <p>
-    No. These questions focus on compliance, continuity, and public access to information. Transparency benefits
-    residents regardless of who holds office.
-  </p>
-</section>
-
-    <!-- Meeting Minutes -->
-    <section id="meeting-minutes-status">
-  <h2>Meeting Minutes Status</h2>
-  <p>
-    Township board and advisory board meeting minutes are required public records under Indiana law
-    and must be retained permanently. As of now, Jackson Township does not publish these minutes
-    online, and this site does not yet have copies.
-  </p>
-  <p>
-    An official Access to Public Records Act (APRA) request for all minutes from 2012 to the present
-    will be submitted. Once those records are received, this section will be updated with
-    term-by-term summaries of key actions and decisions.
-  </p>
-  <p class="small">
-    Residents who wish to independently request minutes may also contact the township trustee or the
-    DeKalb County Clerk and reference Indiana’s Open Door Law and Access to Public Records Act.
-  </p>
-</section>
-
-    <!-- LOOKING AHEAD -->
-    <section id="looking-ahead">
-      <h2>Looking Ahead to the 2026 Election</h2>
-      <p>
-        This site does not endorse any candidate. It simply lays out the facts so voters can decide whether they prefer
-        continuity, change, or some balance of both in township leadership.
-      </p>
-      <p>
-        Residents who want to serve on the advisory board or as trustee in 2026 can use this data to understand the
-        history of compensation, the stability of the current team, and where they might offer fresh ideas in:
-      </p>
-      <ul>
-        <li>Budget stewardship and transparency</li>
-        <li>Communication with residents and HOAs</li>
-        <li>Readiness to serve neighbors in times of need</li>
-      </ul>
-    </section>
-
-    <section id="run-for-office-link">
-  <h2>Interested in Running for Township Office?</h2>
-  <p>
-    If you are a Jackson Township resident who wants to understand how to run for trustee or the advisory board,
-    there is a separate guide available here:
-    <a href="run-for-office.html">How to Run for Township Office in Jackson Township</a>.
-  </p>
-</section>
-
-    <section id="faq">
-  <h2>Frequently Asked Questions About This Data</h2>
-
-  <h3>Where did these numbers come from?</h3>
-  <p>
-    All figures come from the State of Indiana’s <strong>Indiana Gateway</strong> “Certified Report of Public Employment
-    and Compensation” for Jackson Township, DeKalb County, for the years 2012 through 2024. The data is entered and
-    certified by local officials and then published by the state.
-  </p>
-
-  <h3>Are these amounts exact?</h3>
-  <p>
-    The numbers shown are exactly what appears in the state reports for each year and each person. They reflect
-    compensation reported to the state for that calendar year. If a correction is made in Gateway in the future, this
-    site can be updated to match.
-  </p>
-
-  <h3>Does this include benefits?</h3>
-  <p>
-    The report focuses on compensation paid, such as salary or stipend. It does not break out benefits like health
-    insurance separately for township officials. For more detailed breakdowns, residents can request additional
-    documentation directly from the township or the DeKalb County Clerk.
-  </p>
-
-  <h3>Why is there no deputy or clerk listed after 2014?</h3>
-  <p>
-    From 2012–2014, the reports show compensation for a deputy trustee/clerk. After 2014, no deputy or clerk
-    compensation is reported in the state data for Jackson Township. This could mean the duties were combined into
-    other roles, handled differently, or not compensated in the same way. For a precise explanation, residents can ask
-    the trustee directly.
-  </p>
-
-  <h3>Is this site supporting or opposing any candidate?</h3>
-  <p>
-    No. This site does not endorse or oppose any person. It is simply a summary of public information already on file
-    with the State of Indiana, presented in a format that is easier for residents, HOAs, and voters to understand and
-    discuss.
-  </p>
-
-  <h3>What if I think there is an error?</h3>
-  <p>
-    The first step is to check the original Indiana Gateway report for the year in question. If there appears to be a
-    mistake in the state data, residents can contact the township trustee or the DeKalb County Clerk to ask whether a
-    correction is needed. If the state data changes, this site can be updated to reflect the corrected information.
-  </p>
-</section>
-
-
-  <footer class="footer">
+<div class="container">
+
+  <section id="intro" class="card">
+    <h1>Welcome to the Jackson Township Transparency Project</h1>
+    <p>
+      This website provides organized, easy-to-read information about Jackson Township government in
+      DeKalb County, Indiana. It uses publicly available data and Indiana Code references to help residents
+      understand who does what, how officials are compensated, and how township elections work.
+    </p>
+    <p class="small">
+      This site is resident-led, non-partisan, and not an official publication of Jackson Township or any
+      candidate.
+    </p>
+  </section>
+
+  <section id="quick-links" class="card">
+    <h2>Start Here</h2>
+    <ul>
+      <li>
+        <strong>What does the Trustee and Advisory Board actually do?</strong><br />
+        Read the plain-language summary on the
+        <a href="roles.html">Trustee &amp; Board Duties</a> page.
+      </li>
+      <li>
+        <strong>How much are officials paid over time?</strong><br />
+        View 12-year compensation trends and download the raw data on the
+        <a href="data.html">Compensation &amp; Trends</a> page.
+      </li>
+      <li>
+        <strong>Thinking about running for township office?</strong><br />
+        See the <a href="run-for-office.html">How to Run for Township Office</a> guide.
+      </li>
+    </ul>
+  </section>
+
+  <section id="roles-link" class="card">
+    <h2>Township Roles &amp; Responsibilities</h2>
+    <p>
+      Want to know what the Township Trustee and Advisory Board are legally responsible for under Indiana law?
+      We have created a simple page that explains each role in plain language.
+    </p>
+    <p>
+      <a href="roles.html">View Trustee and Board Duties &rarr;</a>
+    </p>
+  </section>
+
+  <section id="transparency-focus" class="card">
+    <h2>What This Site Focuses On</h2>
+    <ul>
+      <li>Official responsibilities of the Trustee and Advisory Board under Indiana law.</li>
+      <li>Compensation patterns for township officials over the past twelve years.</li>
+      <li>Changes in structure and staffing, such as the removal of the paid deputy/clerk role.</li>
+      <li>Continuity of government topics, including the trustee’s designee requirement.</li>
+      <li>Fire and emergency services planning as the current contract approaches expiration.</li>
+    </ul>
+    <p class="small">
+      The goal is not to argue for or against particular individuals, but to give residents clear,
+      objective information that is often hard to find in one place.
+    </p>
+  </section>
+
+  <section id="run-link" class="card">
+    <h2>Interested in Running for Township Office?</h2>
+    <p>
+      If you are a Jackson Township resident who wants to understand how to run for trustee or for the advisory
+      board, there is a separate guide available here:
+      <a href="run-for-office.html">How to Run for Township Office in Jackson Township</a>.
+    </p>
+  </section>
+
+  <section id="designee-faq" class="card">
+    <h2>Trustee Designee Frequently Asked Questions</h2>
+
+    <h3>Does Jackson Township publish the trustee’s designee?</h3>
+    <p>
+      No published record is currently available on the township website. This does not mean the trustee failed
+      to designate someone; the law requires notification to the Board Chair and the County Sheriff, not public
+      posting.
+    </p>
+
+    <h3>Who would run the township if the trustee is absent or incapacitated?</h3>
+    <p>
+      Indiana law requires a designated individual to perform the trustee’s duties. Without public documentation,
+      residents cannot verify who that person is. A simple public posting would remove uncertainty.
+    </p>
+
+    <h3>Why does the township no longer have a Deputy Trustee/Clerk?</h3>
+    <p>
+      Compensation data shows the position was active before 2015, then discontinued. The township may still
+      have designated a designee, but the role and responsibilities are not publicly documented.
+    </p>
+
+    <h3>Is the Board Chair automatically the trustee’s backup?</h3>
+    <p>
+      No. The trustee must formally designate a person. The Board Chair only receives notice, not automatic
+      authority.
+    </p>
+
+    <h3>Why is long-term leadership relevant?</h3>
+    <p>
+      Jackson Township has had a small, largely unchanged leadership group for more than a decade. Transparency
+      helps residents understand how representation and oversight have evolved.
+    </p>
+
+    <h3>Is this political?</h3>
+    <p>
+      No. These questions focus on compliance, continuity, and public access to information. Transparency benefits
+      residents regardless of who holds office.
+    </p>
+  </section>
+
+</div>
+
+<footer class="footer">
   <p>
     Jackson Township Transparency Project · A resident-led, non-partisan website.
     Not an official publication of Jackson Township or any candidate.
@@ -655,8 +157,5 @@
   </p>
 </footer>
 
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
