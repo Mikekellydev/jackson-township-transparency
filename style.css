@@ -1,11 +1,20 @@
+/* ================================
+   Base + Layout
+================================ */
+
 :root {
-  --bg: #f5f5f7;
+  --bg: #f1f5f9;
+  --bg-alt: #e2e8f0;
   --card-bg: #ffffff;
-  --text: #1f2933;
+  --text: #0f172a;
+  --muted: #64748b;
   --accent: #2563eb;
-  --border: #e2e8f0;
-  --muted: #6b7280;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --danger: #b91c1c;
+  --border: #d4d4d8;
   --radius: 12px;
+  --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.06);
+  --shadow-subtle: 0 6px 14px rgba(15, 23, 42, 0.04);
 }
 
 *,
@@ -14,123 +23,118 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
+  background: radial-gradient(circle at top left, #e0f2fe 0, #f8fafc 40%, #e5e7eb 100%);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.hero {
-  background: linear-gradient(135deg, #0f172a, #1d4ed8);
-  color: #f9fafb;
-  padding: 2.5rem 1.5rem;
+/* Main page wrapper (optional if you want to use it later) */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem;
-}
-
-.subtitle {
-  margin: 0 0 0.75rem;
-  font-size: 1rem;
-}
-
-.note {
-  margin: 0;
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
+/* Central content container */
 .container {
-  max-width: 1000px;
-  margin: 1.5rem auto 3rem;
-  padding: 0 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 3rem;
+}
+
+/* ================================
+   Header + Footer
+================================ */
+
+.site-header {
+  background: rgba(15, 23, 42, 0.9);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+}
+
+.site-header .container {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.site-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.site-nav {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.site-nav a:hover {
+  background: rgba(148, 163, 184, 0.25);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1rem 1.25rem 1.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ================================
+   Typography
+================================ */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin-top: 0;
+  color: #0f172a;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
 }
 
 h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
 }
 
 p {
-  margin: 0.25rem 0 0.75rem;
-}
-
-ul {
-  margin: 0.25rem 0 0.75rem 1.25rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(0, 1fr);
-}
-
-@media (min-width: 800px) {
-  .grid {
-    grid-template-columns: 1.1fr 1.1fr;
-  }
-}
-
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
-}
-
-.table-wrapper {
-  margin-top: 0.75rem;
-  overflow-x: auto;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  min-width: 480px;
-}
-
-th,
-td {
-  padding: 0.5rem 0.75rem;
-  text-align: left;
-  font-size: 0.9rem;
-}
-
-thead {
-  background: #e5e7eb;
-}
-
-tbody tr:nth-child(even) {
-  background: #f9fafb;
-}
-
-.totals-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.totals-list li {
-  margin-bottom: 0.4rem;
+  margin: 0.4rem 0 0.7rem;
 }
 
 .small {
@@ -138,29 +142,290 @@ tbody tr:nth-child(even) {
   color: var(--muted);
 }
 
-.chart-caption {
-  margin-top: 0.5rem;
+/* Links */
+
+a {
+  color: var(--accent);
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Sections as "Cards"
+================================ */
+
+section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-subtle);
+  padding: 1.25rem 1.4rem;
+  margin: 1.2rem 0;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+section > h1,
+section > h2 {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+/* For nested sections (like inside roles.html), you can add class="subsection" if needed */
+.subsection {
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+/* ================================
+   Buttons + Download links
+================================ */
+
+.button-link,
+.btn,
 .btn-download {
   display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.9rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 999px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  text-decoration: none;
   font-size: 0.9rem;
-}
-
-.btn-download:hover {
-  background: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--accent);
   color: #ffffff;
+  background: var(--accent);
+  cursor: pointer;
 }
 
-.footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+.button-link:hover,
+.btn:hover,
+.btn-download:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+}
+
+/* For the download button we already created */
+.btn-download {
+  margin-top: 0.4rem;
+}
+
+/* ================================
+   Comparison Grid (Deputy / Leadership)
+================================ */
+
+.comparison-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.comparison-column {
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0.9rem 1rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.comparison-column h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.comparison-column h3 span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.comparison-column ul {
+  margin-left: 1rem;
+  padding-left: 0;
+}
+
+@media (min-width: 800px) {
+  .comparison-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================================
+   Timeline (Fire/EMS timeline)
+================================ */
+
+.timeline {
+  border-left: 3px solid #cbd5e1;
+  margin: 0.7rem 0 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.timeline-item {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.35rem;
+  top: 0.2rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #64748b;
+}
+
+.timeline-critical::before {
+  background: var(--danger);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.timeline-content {
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+}
+
+/* ================================
+   Sidebar / Info Box
+================================ */
+
+.sidebar-box {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
+#residents-should-know ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
+
+/* ================================
+   Flowchart (Continuity diagram)
+================================ */
+
+.flowchart {
   text-align: center;
+  margin: 1rem auto;
+  width: min(90%, 600px);
+}
+
+.flowchart .step {
+  border: 1px solid #cbd5e1;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  background: #f9fafb;
+  margin: 0.5rem 0;
+  box-shadow: var(--shadow-subtle);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.flowchart .step small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.flowchart .arrow {
+  font-size: 1.5rem;
+  margin: 0.2rem 0;
+}
+
+/* ================================
+   FAQ Lists
+================================ */
+
+#faq,
+#faq-transparency,
+#faq-transparency ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* you’re already using h3+paragraph – no extra needed */
+
+/* ================================
+   Hero Sections (run-for-office, etc.)
+================================ */
+
+.hero {
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  color: #ffffff;
+  padding: 2.1rem 1.25rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.hero .subtitle {
+  margin: 0.1rem 0 0.7rem;
+  font-size: 0.95rem;
+  color: #e0f2fe;
+}
+
+.hero .note {
+  font-size: 0.9rem;
+  max-width: 700px;
+}
+
+/* ================================
+   Utility
+================================ */
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.5);
+  margin: 1rem 0 1.1rem;
+}
+
+ul {
+  margin: 0.3rem 0 0.8rem;
+  padding-left: 1.1rem;
+}
+
+ol {
+  margin: 0.3rem 0 0.9rem;
+  padding-left: 1.4rem;
+}
+
+/* Make it breathe on small screens */
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1.3rem 0.9rem 2.2rem;
+  }
+
+  section {
+    padding: 1rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
 }
