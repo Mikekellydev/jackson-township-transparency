@@ -156,13 +156,24 @@ a:hover {
    Sections as "Cards"
 ================================ */
 
-section {
+ection {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow-subtle);
-  padding: 1.25rem 1.4rem;
-  margin: 1.2rem 0;
+  padding: 1.5rem 1.8rem;      /* inner spacing */
+  margin: 1.3rem auto;         /* center the card */
   border: 1px solid rgba(148, 163, 184, 0.4);
+  max-width: 880px;            /* << NEW: narrower card width */
+}
+/* Narrow, centered card layout */
+.card {
+  max-width: 850px;          /* prevents cards from stretching too wide */
+  margin: 1.5rem auto;       /* centers the card horizontally */
+  padding: 1.8rem 2rem;      /* adds generous interior spacing */
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
 section > h1,
