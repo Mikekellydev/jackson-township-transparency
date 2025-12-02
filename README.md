@@ -9,7 +9,11 @@
 > Accessible transparency report for Jackson Township residents. Using official Indiana Gateway data (2012–2024), this site summarizes compensation for township officials, changes in leadership seats, and governance patterns to help homeowners and voters make informed decisions.
 
 ---
-A resident-led initiative to provide clear, accessible information about Jackson Township government.
+## Purpose
+This project is non-partisan and not affiliated with any township officials or candidates. The goal
+is to make local government easier for residents to understand, improving transparency and civic engagement.
+
+This is a resident-led initiative to provide clear, accessible information about Jackson Township government.
 This project organizes public data, Indiana Code references, and educational resources so that residents
 can better understand how their local government operates.
 
