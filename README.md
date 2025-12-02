@@ -9,50 +9,23 @@
 > Accessible transparency report for Jackson Township residents. Using official Indiana Gateway data (2012–2024), this site summarizes compensation for township officials, changes in leadership seats, and governance patterns to help homeowners and voters make informed decisions.
 
 ---
+A resident-led initiative to provide clear, accessible information about Jackson Township government.
+This project organizes public data, Indiana Code references, and educational resources so that residents
+can better understand how their local government operates.
 
-## 📊 About This Project
+## Features
+- 12-year compensation trends for township officials  
+- Statutory duties of the Township Trustee and Advisory Board  
+- Guide on how residents can run for township office  
+- Downloadable CSV data  
+- Public-source links for verification  
 
-This static website provides a clear, fact-based summary of:
+## Purpose
+This project is non-partisan and not affiliated with any township officials or candidates. The goal
+is to make local government easier for residents to understand, improving transparency and civic engagement.
 
-- Trustee compensation (2012–2024)  
-- Advisory board compensation (2012–2024)  
-- Deputy trustee/clerk compensation  
-- Twelve-year rollups by individual  
-- Leadership continuity and governing seat changes  
-- Trend charts using Chart.js  
-- Publicly available Indiana Gateway data  
+## Contributing
+Contributions are welcome through issues or pull requests.
 
-The goal is to make township information accessible and understandable for residents, HOAs, and voters ahead of the **2026 township election**.
-
----
-
-## 🌐 Live Site
-
-Once GitHub Pages is enabled, your site will be here:
-
-**https://<YOUR-USERNAME>.github.io/jackson-township-transparency/**
-
-Replace `<YOUR-USERNAME>` with your actual GitHub username.
-
----
-
-## 📁 Repository Structure
-
-index.html # Main static page
-style.css # Stylesheet
-script.js # Chart.js data visualization setup
-README.md # Project documentation
-
-
----
-
-## 🚀 How to Run Locally
-
-1. Clone the repo:
-
-```bash
-git clone https://github.com/<YOUR-USERNAME>/jackson-township-transparency.git
-
-
-Open index.html in your browser.
-No build process. No frameworks. Fully static.
+## License
+This project is released under the MIT License.
