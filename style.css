@@ -156,7 +156,7 @@ a:hover {
    Sections as "Cards"
 ================================ */
 
-ection {
+section {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow-subtle);
@@ -187,6 +187,31 @@ section > h2 {
 .subsection {
   box-shadow: none;
   border-radius: 10px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #2563eb;      /* blue */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-subtle);
 }
 
 /* ================================
