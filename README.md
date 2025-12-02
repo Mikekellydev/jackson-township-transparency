@@ -1,7 +1,7 @@
 # Jackson Township Transparency Report  
 ### Public Data Summary · 2012–2024
 
-![GitHub Pages Deploy](https://img.shields.io/github/deployments/<YOUR-USERNAME>/jackson-township-transparency/github-pages?label=pages%20deploy)
+![GitHub Pages Deploy](https://img.shields.io/github/deployments/mikekellydev/jackson-township-transparency/github-pages?label=pages%20deploy)
 ![Made With HTML](https://img.shields.io/badge/HTML-Static%20Site-blue)
 ![Chart.js](https://img.shields.io/badge/Charts-Chart.js-brightgreen)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
