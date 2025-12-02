@@ -24,10 +24,6 @@ can better understand how their local government operates.
 - Downloadable CSV data  
 - Public-source links for verification  
 
-## Purpose
-This project is non-partisan and not affiliated with any township officials or candidates. The goal
-is to make local government easier for residents to understand, improving transparency and civic engagement.
-
 ## Contributing
 Contributions are welcome through issues or pull requests.
 
