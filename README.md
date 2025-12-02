@@ -38,3 +38,21 @@ Replace `<YOUR-USERNAME>` with your actual GitHub username.
 
 ## 📁 Repository Structure
 
+index.html # Main static page
+style.css # Stylesheet
+script.js # Chart.js data visualization setup
+README.md # Project documentation
+
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/<YOUR-USERNAME>/jackson-township-transparency.git
+
+
+Open index.html in your browser.
+No build process. No frameworks. Fully static.
