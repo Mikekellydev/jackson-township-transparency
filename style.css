@@ -43,9 +43,15 @@ body {
   flex-direction: column;
 }
 banner {
-   max-width: 960px;
-   margin: 0 auto;
-   text-align: center;
+  width: 100%;
+  background: #0b6ea6; /* example color */
+  color: #fff;
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  position: relative; /* or fixed/sticky if you want it to stay on top */
+  z-index: 9999;
 }
 /* Central content container */
 .container {
