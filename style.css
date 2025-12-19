@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-banner {
+.banner {
   width: 100%;
   background: #0b6ea6; /* example color */
   color: #fff;
