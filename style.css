@@ -42,7 +42,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.banner {
+   max-width: 960px;
+   margin: 0 auto;
+   text-align: center;
+}
 /* Central content container */
 .container {
   max-width: 960px;
